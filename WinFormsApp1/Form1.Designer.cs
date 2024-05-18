@@ -37,10 +37,10 @@
             foreverLabel3 = new ReaLTaiizor.Controls.ForeverLabel();
             foreverLabel2 = new ReaLTaiizor.Controls.ForeverLabel();
             foreverLabel1 = new ReaLTaiizor.Controls.ForeverLabel();
-            foreverTextBox3 = new ReaLTaiizor.Controls.ForeverTextBox();
-            foreverTextBox2 = new ReaLTaiizor.Controls.ForeverTextBox();
-            foreverTextBox1 = new ReaLTaiizor.Controls.ForeverTextBox();
-            foreverButton1 = new ReaLTaiizor.Controls.ForeverButton();
+            txtSenha = new ReaLTaiizor.Controls.ForeverTextBox();
+            txtEmail = new ReaLTaiizor.Controls.ForeverTextBox();
+            txtNome = new ReaLTaiizor.Controls.ForeverTextBox();
+            btnSalvar = new ReaLTaiizor.Controls.ForeverButton();
             foreverForm1.SuspendLayout();
             foreverGroupBox1.SuspendLayout();
             SuspendLayout();
@@ -55,7 +55,7 @@
             foreverForm1.Controls.Add(foreverClose1);
             foreverForm1.Controls.Add(foreverButton2);
             foreverForm1.Controls.Add(foreverGroupBox1);
-            foreverForm1.Controls.Add(foreverButton1);
+            foreverForm1.Controls.Add(btnSalvar);
             foreverForm1.Dock = DockStyle.Fill;
             foreverForm1.Font = new Font("Segoe UI", 12F);
             foreverForm1.ForeverColor = Color.FromArgb(35, 168, 109);
@@ -144,9 +144,9 @@
             foreverGroupBox1.Controls.Add(foreverLabel3);
             foreverGroupBox1.Controls.Add(foreverLabel2);
             foreverGroupBox1.Controls.Add(foreverLabel1);
-            foreverGroupBox1.Controls.Add(foreverTextBox3);
-            foreverGroupBox1.Controls.Add(foreverTextBox2);
-            foreverGroupBox1.Controls.Add(foreverTextBox1);
+            foreverGroupBox1.Controls.Add(txtSenha);
+            foreverGroupBox1.Controls.Add(txtEmail);
+            foreverGroupBox1.Controls.Add(txtNome);
             foreverGroupBox1.Font = new Font("Comic Sans MS", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             foreverGroupBox1.Location = new Point(38, 78);
             foreverGroupBox1.Name = "foreverGroupBox1";
@@ -180,7 +180,6 @@
             foreverLabel2.Size = new Size(78, 30);
             foreverLabel2.TabIndex = 4;
             foreverLabel2.Text = "e-mail";
-            foreverLabel2.Click += foreverLabel2_Click;
             // 
             // foreverLabel1
             // 
@@ -193,74 +192,71 @@
             foreverLabel1.Size = new Size(70, 30);
             foreverLabel1.TabIndex = 3;
             foreverLabel1.Text = "senha";
-            foreverLabel1.Click += foreverLabel1_Click;
             // 
-            // foreverTextBox3
+            // txtSenha
             // 
-            foreverTextBox3.BackColor = Color.Transparent;
-            foreverTextBox3.BaseColor = Color.FromArgb(45, 47, 49);
-            foreverTextBox3.BorderColor = Color.FromArgb(35, 168, 109);
-            foreverTextBox3.FocusOnHover = false;
-            foreverTextBox3.ForeColor = Color.FromArgb(192, 192, 192);
-            foreverTextBox3.Location = new Point(21, 240);
-            foreverTextBox3.MaxLength = 32767;
-            foreverTextBox3.Multiline = false;
-            foreverTextBox3.Name = "foreverTextBox3";
-            foreverTextBox3.ReadOnly = false;
-            foreverTextBox3.Size = new Size(133, 29);
-            foreverTextBox3.TabIndex = 2;
-            foreverTextBox3.TextAlign = HorizontalAlignment.Left;
-            foreverTextBox3.UseSystemPasswordChar = false;
-            foreverTextBox3.TextChanged += foreverTextBox3_TextChanged;
+            txtSenha.BackColor = Color.Transparent;
+            txtSenha.BaseColor = Color.FromArgb(45, 47, 49);
+            txtSenha.BorderColor = Color.FromArgb(35, 168, 109);
+            txtSenha.FocusOnHover = false;
+            txtSenha.ForeColor = Color.FromArgb(192, 192, 192);
+            txtSenha.Location = new Point(21, 240);
+            txtSenha.MaxLength = 32767;
+            txtSenha.Multiline = false;
+            txtSenha.Name = "txtSenha";
+            txtSenha.ReadOnly = false;
+            txtSenha.Size = new Size(133, 29);
+            txtSenha.TabIndex = 2;
+            txtSenha.TextAlign = HorizontalAlignment.Left;
+            txtSenha.UseSystemPasswordChar = false;
             // 
-            // foreverTextBox2
+            // txtEmail
             // 
-            foreverTextBox2.BackColor = Color.Transparent;
-            foreverTextBox2.BaseColor = Color.FromArgb(45, 47, 49);
-            foreverTextBox2.BorderColor = Color.FromArgb(35, 168, 109);
-            foreverTextBox2.FocusOnHover = false;
-            foreverTextBox2.ForeColor = Color.FromArgb(192, 192, 192);
-            foreverTextBox2.Location = new Point(21, 157);
-            foreverTextBox2.MaxLength = 32767;
-            foreverTextBox2.Multiline = false;
-            foreverTextBox2.Name = "foreverTextBox2";
-            foreverTextBox2.ReadOnly = false;
-            foreverTextBox2.Size = new Size(133, 29);
-            foreverTextBox2.TabIndex = 1;
-            foreverTextBox2.TextAlign = HorizontalAlignment.Left;
-            foreverTextBox2.UseSystemPasswordChar = false;
-            foreverTextBox2.TextChanged += foreverTextBox2_TextChanged;
+            txtEmail.BackColor = Color.Transparent;
+            txtEmail.BaseColor = Color.FromArgb(45, 47, 49);
+            txtEmail.BorderColor = Color.FromArgb(35, 168, 109);
+            txtEmail.FocusOnHover = false;
+            txtEmail.ForeColor = Color.FromArgb(192, 192, 192);
+            txtEmail.Location = new Point(21, 157);
+            txtEmail.MaxLength = 32767;
+            txtEmail.Multiline = false;
+            txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = false;
+            txtEmail.Size = new Size(133, 29);
+            txtEmail.TabIndex = 1;
+            txtEmail.TextAlign = HorizontalAlignment.Left;
+            txtEmail.UseSystemPasswordChar = false;
             // 
-            // foreverTextBox1
+            // txtNome
             // 
-            foreverTextBox1.BackColor = Color.Transparent;
-            foreverTextBox1.BaseColor = Color.FromArgb(45, 47, 49);
-            foreverTextBox1.BorderColor = Color.FromArgb(35, 168, 109);
-            foreverTextBox1.FocusOnHover = false;
-            foreverTextBox1.ForeColor = Color.FromArgb(192, 192, 192);
-            foreverTextBox1.Location = new Point(22, 83);
-            foreverTextBox1.MaxLength = 32767;
-            foreverTextBox1.Multiline = false;
-            foreverTextBox1.Name = "foreverTextBox1";
-            foreverTextBox1.ReadOnly = false;
-            foreverTextBox1.Size = new Size(133, 29);
-            foreverTextBox1.TabIndex = 0;
-            foreverTextBox1.TextAlign = HorizontalAlignment.Left;
-            foreverTextBox1.UseSystemPasswordChar = false;
+            txtNome.BackColor = Color.Transparent;
+            txtNome.BaseColor = Color.FromArgb(45, 47, 49);
+            txtNome.BorderColor = Color.FromArgb(35, 168, 109);
+            txtNome.FocusOnHover = false;
+            txtNome.ForeColor = Color.FromArgb(192, 192, 192);
+            txtNome.Location = new Point(22, 83);
+            txtNome.MaxLength = 32767;
+            txtNome.Multiline = false;
+            txtNome.Name = "txtNome";
+            txtNome.ReadOnly = false;
+            txtNome.Size = new Size(133, 29);
+            txtNome.TabIndex = 0;
+            txtNome.TextAlign = HorizontalAlignment.Left;
+            txtNome.UseSystemPasswordChar = false;
             // 
-            // foreverButton1
+            // btnSalvar
             // 
-            foreverButton1.BackColor = Color.Transparent;
-            foreverButton1.BaseColor = Color.FromArgb(35, 168, 109);
-            foreverButton1.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            foreverButton1.Location = new Point(231, 365);
-            foreverButton1.Name = "foreverButton1";
-            foreverButton1.Rounded = false;
-            foreverButton1.Size = new Size(120, 40);
-            foreverButton1.TabIndex = 0;
-            foreverButton1.Text = "salvar";
-            foreverButton1.TextColor = Color.FromArgb(243, 243, 243);
-            foreverButton1.Click += foreverButton1_Click;
+            btnSalvar.BackColor = Color.Transparent;
+            btnSalvar.BaseColor = Color.FromArgb(35, 168, 109);
+            btnSalvar.Font = new Font("Comic Sans MS", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSalvar.Location = new Point(231, 365);
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.Rounded = false;
+            btnSalvar.Size = new Size(120, 40);
+            btnSalvar.TabIndex = 0;
+            btnSalvar.Text = "salvar";
+            btnSalvar.TextColor = Color.FromArgb(243, 243, 243);
+            btnSalvar.Click += btnSalvar_Click;
             // 
             // Form1
             // 
@@ -273,7 +269,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "dungeonForm1";
             TransparencyKey = Color.Fuchsia;
-            Load += Form1_Load;
             foreverForm1.ResumeLayout(false);
             foreverGroupBox1.ResumeLayout(false);
             foreverGroupBox1.PerformLayout();
@@ -286,10 +281,10 @@
         private ReaLTaiizor.Controls.ForeverButton foreverButton2;
         private ReaLTaiizor.Controls.ForeverGroupBox foreverGroupBox1;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel1;
-        private ReaLTaiizor.Controls.ForeverTextBox foreverTextBox3;
-        private ReaLTaiizor.Controls.ForeverTextBox foreverTextBox2;
-        private ReaLTaiizor.Controls.ForeverTextBox foreverTextBox1;
-        private ReaLTaiizor.Controls.ForeverButton foreverButton1;
+        private ReaLTaiizor.Controls.ForeverTextBox txtSenha;
+        private ReaLTaiizor.Controls.ForeverTextBox txtEmail;
+        private ReaLTaiizor.Controls.ForeverTextBox txtNome;
+        private ReaLTaiizor.Controls.ForeverButton btnSalvar;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel3;
         private ReaLTaiizor.Controls.ForeverLabel foreverLabel2;
         private ReaLTaiizor.Controls.ForeverMinimize foreverMinimize1;
